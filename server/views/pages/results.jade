@@ -1,0 +1,26 @@
+extends ../layouts/layout
+
+block content
+  .row
+    .col-md-6.col-md-offset-1
+      canvas#canvas(height='450', width='450')
+      h4 User Emotions
+    .col-md-4.col-md-offset-1
+      h3 Sentiments Analysis
+      if score < 0
+        h2(style="color:red") !{alchemy_sentiment}
+        h3 Score
+        h2(style="color:red") !{score}
+        img(src= "http://www.iconsplace.com/icons/preview/red/sad-256.png")
+        
+      if score > 0
+        h2 !{alchemy_sentiment}
+        h3 Score
+        h2 !{score}
+        img(src= "http://www.iconsdb.com/icons/preview/green/happy-xxl.png")
+
+      if score == 0
+        h2(style="color:yellow") !{alchemy_sentiment}
+        h3 Score
+        h2(style="color:yellow") !{score}
+        img(src= "http://cdn.mysitemyway.com/icons-watermarks/simple-yellow/classic-emoticons/classic-emoticons_neutral-face/classic-emoticons_neutral-face_simple-yellow_512x512.png")

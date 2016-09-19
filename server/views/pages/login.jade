@@ -1,0 +1,12 @@
+extends ../layouts/layout
+
+block content
+  .row
+    .col-md-12
+      ul.list-inline.list-unstyled
+        li
+          a.btn.btn-primary(href="/auth/facebook") Login with Facebook
+      br
+      if (messages.error)
+        p
+          span(style="color:red")= messages.error

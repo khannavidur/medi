@@ -1,0 +1,54 @@
+extends ../layouts/layout
+
+block content
+  .row
+    .col-md-6.col-md-offset-3
+      form#vidur(role='form', action='/auth/local', method='post')
+
+        .form-group
+          label(for='addictions',data-question='Any sort of indulgence in alcohol or drugs ?') Any sort of indulgence in alcohol or drugs ?
+          input#addictions.form-control(type='text', name='addictions', placeholder='')
+
+
+        .form-group
+          label(for='life',data-question='How is your life going in general ?') How is your life going in general ?
+          input#life.form-control(type='text', name='life', placeholder='')
+
+        .form-group
+          label(for='feel',data-question='How are you feeling currently ?') How are you feeling currently ?
+          input#feel.form-control(type='text', name='feel', placeholder='')
+
+        .form-group
+          label(for='sports',data-question='Any participation in physical activities or sports ?') Any participation in physical activities or sports ?
+          input#sports.form-control(type='text', name='sports', placeholder='')
+
+
+        .form-group
+          label(for='debug_stress',data-question='How do you cope with stress ?') How do you cope with stress ?
+          input#debug_stress.form-control(type='text', name='debug_stress', placeholder='')
+
+        .form-group
+          label(for='family_environment',data-question='How is your family environment? Are they supportive ?') How is your family environment? Are they supportive ?
+          input#family_environment.form-control(type='text', name='family_environment', placeholder='')
+
+
+        .form-group
+          label(for='goals',data-question='What are you goals and purpose in life ?') What are you goals and purpose in life ?
+          input#goals.form-control(type='text', name='goals', placeholder='')
+
+
+        .form-group
+          label(for='sleep_pattern',data-question='Can you describe about you sleep pattern ?') Can you describe about you sleep pattern ?
+          input#sleep_pattern.form-control(type='text', name='sleep_pattern', placeholder='')
+
+        .form-group
+          label(for='confidence',data-question='What sort of confidence level you have ?sports') What sort of confidence level you have ?
+          input#confidence.form-control(type='text', name='confidence', placeholder='')
+
+        button.btn.btn-default(type='Analyze') Analyze
+      br
+
+      .spinner-wrapper.hidden
+        .spinner
+        |       Speak now
+
